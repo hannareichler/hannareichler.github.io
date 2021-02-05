@@ -1,0 +1,24 @@
+@@font-face {
+  font-family: dia;
+  src: url(Dia-Black.otf);
+}
+
+body {
+  background-color: #EAE7DC;
+  font-size:20pt;
+  font-family: dia;
+  font-kerning: -40;
+}
+
+.column {
+  font-size:20pt;
+  font-family: dia;
+  font-kerning: -40;
+  column-count: 3;
+}
+
+p {
+  font-family: dia;
+}
+
+.letter {}

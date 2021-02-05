@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>lab</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+@@font-face {
+  font-family: dia;
+  src: url(Dia-Black.otf);
+}
+
+
+body {
+  background-color: #f7EADF;
+  font-family: dia;
+  font-kerning: -60;
+}
+
+
+
+h1 {
+  display: block;
+  font-size: 200pt;
+  margin-top:-20px;
+  margin-bottom:-20px;
+  font-weight: bold;
+  text-align: center;
+  hover: font-size:150%;
+}
+
+a:link, a:visited {
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+</style>
+</head>
+<body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div class="cursor cursor-blob"></div>
+  <style>
+  @media (hover: none) {
+          .cursor {
+              display: none !important;
+          }
+      }
+
+      * {
+          cursor: none;
+      }
+
+      .cursor {
+          z-index: 99999999999999 !important;
+          transform: translate(-50%, -50%);
+          mix-blend-mode: difference;
+      }
+
+      .cursor.cursor-blob {
+          --size: 28px;
+          transition: top 0.04s, left 0.04s, width .2s, height .2s;
+          transition-timing-function: ease-out;
+      }
+
+      .cursor.cursor-blob {
+          width: 50px;
+          height: 50px;
+          background: linear-gradient(120deg, #f9ca24, #ffbe76, #e056fd, #6ab04c, #30336b, #7ed6df);
+          background-size: 1600% 1600%;
+          position: absolute;
+          pointer-events: none;
+          animation: blobRadius 5s ease infinite, blobBackground 15s ease infinite;
+        border-radius:360px;
+      }
+
+
+      @keyframes blobBackground {
+          0%, 100% {
+              background-position: 0% 50%;
+          }
+
+          50% {
+              background-position: 100% 50%;
+          }
+      }
+
+      .cursor-blob.active {
+          width: 120px;
+          height: 120px;
+      }
+  </style>
+      <script>
+      $(window).mousemove(function(e) {
+          $(".cursor").css({
+              left: e.pageX,
+              top: e.pageY
+          })
+      });
+      $(window).mousemove(function(e) {
+          $("a")
+          .on("mouseenter", function() {
+              $('.cursor').addClass("active")
+          })
+      });
+      $(window).mousemove(function(e) {
+          $("a")
+          .on("mouseleave", function() {
+              $('.cursor').removeClass("active")
+          })
+      });
+      </script><script>Static.COOKIE_BANNER_CAPABLE = true;</script>
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-139870842-1', 'auto');ga('send', 'pageview');</script>
+
+<a href="index.html">
+  <h1> text coming soon </h1>
+</a>
+
+</body>
+</html>
